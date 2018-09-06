@@ -99,7 +99,7 @@ let taskBoard = (function () {
                                 
                         if (!this.inputTime.match(this.timeRegex)) {
                                 this.alert[3].setAttribute('style', 'display:block');
-                                return this.alert[3].innerHTML = '* Invalid time please use 00:00 am/pm';
+                                return this.alert[3].innerHTML = '* Invalid time please use 00:00';
                         } else {
                                 this.alert[3].setAttribute('style', 'display:none');
                                 this.alert[3].innerHTML = '';

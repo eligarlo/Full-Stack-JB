@@ -49,7 +49,7 @@ function createTaskTemplate() {
             </div>
             <div class="col-md-5">
                 <label><strong>Time:</strong>
-                <input id="timeTask" class="inputValidation" placeholder="00:00 am/pm" maxlength="11" style="width:150px" required/>
+                <input id="timeTask" class="inputValidation" placeholder="00:00" maxlength="11" style="width:150px" required/>
                 </label>
                 <p class="alertNotification"></p>
             </div>
