@@ -7,8 +7,6 @@ let taskBoard = (function () {
                         this.cacheDomMain();
                         this.cacheDomFooter();
                         this.renderTemplates();
-
-
                 },
                 cacheDomHeader: function () {
 
@@ -43,8 +41,6 @@ let taskBoard = (function () {
                                         this.footer.innerHTML += Mustache.to_html(displayNoteTemplate(), notes.notesArray[i]);
                                 }
                         }
-
-
                 },
                 createNote: function () {
                         this.inputTitle = document.getElementById('titleTask').value;
@@ -58,7 +54,7 @@ let taskBoard = (function () {
                         this.validateContent();
                 },
                 validateContent: function () {
-                                //--------Start of all inputs are fill up--------//
+                        //--------Start of all inputs are fill up--------//
 
                         for (let i = 0; i < this.input.length; i++) {
                                 if (this.input[i].value === '') {
@@ -69,9 +65,9 @@ let taskBoard = (function () {
                                         this.alert[i].setAttribute('style', 'display:none');
                                 }
                         }
-                                //--------END Of all inputs are fill up--------//
+                        //--------END Of all inputs are fill up--------//
 
-                                //--------Start of Title is not taken--------//
+                        //--------Start of Title is not taken--------//
                         for (let k = 0; k < notes.notesArray.length; k++) {
                                 if (notes.notesArray[k].title === this.inputTitle) {
                                         this.alert[0].setAttribute('style', 'display:block');
@@ -80,31 +76,54 @@ let taskBoard = (function () {
                                         this.alert[0].setAttribute('style', 'display:none');
                                         this.alert[0].innerHTML = '';
                                 }
-                        }         
-                                //--------END Of Title is not taken--------//
-                                
-                        //--------Start of date matches dateRegex and Current Year--------//
-                                
+                        }
+                        //--------END Of Title is not taken--------//
+
+                        //--------Start of date matches dateRegex and Current Date and Time--------//
+
+                        this.day = this.inputDate.split('/')[0];
+                        this.month = this.inputDate.split('/')[1];
+                        this.year = this.inputDate.split('/')[2];
+                        this.hour = this.inputTime.split(':')[0];
+                        this.minute = this.inputTime.split(':')[1];
+                        this.d = new Date(this.year, (this.month - 1), this.day, (new Date().getHours()), (new Date().getMinutes()), (new Date().getSeconds()), (new Date().getMilliseconds()));
+                        this.h = new Date(this.year, (this.month - 1), this.day, this.hour, this.minute);
+                        this.currentDate = new Date();
+
                         if (!this.inputDate.match(this.dateRegex)) {
+
                                 this.alert[2].setAttribute('style', 'display:block');
                                 return this.alert[2].innerHTML = '* Invalid date please use dd/mm/yyyy';
-                        } 
+
+                        } else if (this.d < this.currentDate) {
+                                console.log(this.d, this.currentDate);
+
+                                this.alert[2].setAttribute('style', 'display:block');
+                                return this.alert[2].innerHTML = '* Please, add a task for the future';
+
+                        } else if (this.h < this.currentDate) {
+
+                                this.alert[3].setAttribute('style', 'display:block');
+                                return this.alert[3].innerHTML = '* This hour is already in the past';
+                        }
                         else {
                                 this.alert[2].setAttribute('style', 'display:none');
                                 this.alert[2].innerHTML = '';
                         }
                         //--------END Of date matches dateRegex and Current Year--------//
 
-                                //--------Start of time matches timeRegex--------//
-                                
+                        //--------Start of time matches timeRegex--------//
+
                         if (!this.inputTime.match(this.timeRegex)) {
+
                                 this.alert[3].setAttribute('style', 'display:block');
                                 return this.alert[3].innerHTML = '* Invalid time please use 00:00';
+
                         } else {
                                 this.alert[3].setAttribute('style', 'display:none');
                                 this.alert[3].innerHTML = '';
                         }
-                                //--------END Of time matches timeRegex--------//
+                        //--------END Of time matches timeRegex--------//
 
                         this.newNote = new this.Note(this.inputTitle, this.inputTask, this.inputDate, this.inputTime);
                         this.saveLocalStorage();
@@ -114,7 +133,6 @@ let taskBoard = (function () {
 
                         let temp = JSON.stringify(notes.notesArray);
                         localStorage.setItem(this.note, temp);
-
                 },
                 displayLocalStorage: function () {
 
@@ -163,6 +181,7 @@ let taskBoard = (function () {
                 ],
         }
         startSite.init();
+
         return {
                 startSite: startSite
         }
