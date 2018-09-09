@@ -174,8 +174,8 @@ let taskBoard = (function () {
                 notesArray: [{
                         title: "Example",
                         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla molestie tortor vitae gravida aliquam. Pellentesque ultrices sapien at felis hendrerit vestibulum. In hac habitasse platea dictumst. Suspendisse sit amet lorem id leo varius sodales. Ut sit amet massa ligula. Mauris sit amet tortor nec tellus tincidunt scelerisque. Aliquam eget mauris vel nunc cursus placerat.",
-                        date: '04/09/2018',
-                        time: '12:30',
+                        date: 'dd/mm/yyyy',
+                        time: 'hh:mm',
                         justPosted: 'visi'
                 },
                 ],
