@@ -72,6 +72,9 @@ body main .alertNotification {
   font-style: italic;
   max-width: 250px;
 }
+body footer {
+  margin-top: 30px;
+}
 body footer .invisi {
   transition: 0.4s ease-in;
   opacity: 0;
@@ -84,10 +87,13 @@ body footer .notes-img {
   background-image: url('img/notebg.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 250px;
+  min-width: 200px;
+  min-height: 250px;
+  max-width: 200px;
+  max-height: 250px;
   margin-top: 30px;
   padding-top: 35px;
+  padding-right: 2%;
 }
 body footer .notes-img .note {
   background: transparent;
@@ -108,15 +114,26 @@ body footer .notes-img #textNote {
   border: 0 none;
   outline: none;
   overflow-y: auto;
-  width: 100%;
+  max-width: 150px;
+  min-height: 100px;
   max-height: 110px;
-}
-body footer .remove {
-  display: none;
-  cursor: pointer;
 }
 body footer .show-remove:hover .remove {
   display: block;
+  max-width: 200px;
+  max-width: 14px;
+  float: right;
+}
+body footer .trash-place {
+  padding-right: 17%;
+  margin-bottom: 4%;
+}
+body footer .trash-place .remove {
+  display: none;
+  cursor: pointer;
+  max-width: 200px;
+  max-width: 14px;
+  float: right;
 }
 body footer .copyright {
   background-color: #333333;
