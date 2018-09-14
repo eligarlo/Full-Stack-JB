@@ -1,5 +1,3 @@
-//'use strict';
-
 function boardTitleTemplate() {
     return `
         <div class="row">
@@ -65,28 +63,30 @@ function createTaskTemplate() {
 
 function displayNoteTemplate() {
     return `
-    
-        <div  id="{{title}}1" class="col-sm-2 notes-img note show-remove {{justPosted}}">
-            <div class="row align-items-start">
-                <div class="col-sm"><span class="underline"><strong>{{title}}</strong></span></div>
-                <div class="col-sm trash-place">
-                    <i onclick="taskBoard.startSite.removeNote(id)" id="{{title}}" class="far fa-trash-alt remove"></i>
+        <div class="showExpiredDate">
+            <span class="expiredDate"></span>
+            <div  id="{{title}}1" class="col-sm-2 notes-img note show-remove {{justPosted}}">
+                <div class="row align-items-start">
+                    <div class="col-sm"><span class="underline"><strong>{{title}}</strong></span></div>
+                    <div class="col-sm trash-place">
+                        <i onclick="taskBoard.startSite.removeNote(id)" id="{{title}}" class="far fa-trash-alt remove"></i>
+                    </div>
                 </div>
-            </div>
-            <div class="row align-items-center">                
-                <div class="col">
-                <div id="textNote">{{text}}</div>
+                <div class="row align-items-center">                
+                    <div class="col">
+                    <div id="textNote">{{text}}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="row align-items-end">
-                <div class="col-8">
-                    <span>{{date}}</span>
+                <div class="row align-items-end">
+                    <div class="col-8">
+                        <span>{{date}}</span>
+                    </div>
+                    <div class="col-8">
+                        <span>{{time}}</span>
+                    </div>
                 </div>
-                <div class="col-8">
-                    <span>{{time}}</span>
-                </div>
-            </div>            
-        </div>   
+            </div>   
+        </div>
 
     `
 }

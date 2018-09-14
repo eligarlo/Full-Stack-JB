@@ -99,6 +99,19 @@ body {
         
         margin-top: 30px;
         
+        .expiredDate {
+            display: none;
+            border: 1px solid red;
+            border-radius: 10px 50px;
+            background-color: rgba(255,0,0,0.6);
+            color: white;
+            text-align: center;
+            font-style: italic;
+            max-width: 180px;
+        }
+        .showExpiredDate:hover .expiredDate {
+            display: block;
+        }
         .invisi{
             transition: 0.4s ease-in;
             opacity: 0;
@@ -115,7 +128,8 @@ body {
             min-height:250px;
             max-width: 200px;
             max-height: 250px;            
-            margin-top: 30px;
+            margin-top: 25px;
+            margin-bottom: 25px;
             padding-top: 35px;
             padding-right: 2%;
 
@@ -141,8 +155,9 @@ body {
                 border: 0 none;
                 outline: none;
                 overflow-y: auto;
+                margin-bottom: 5px;
                 max-width:150px;
-                min-height: 100px;
+                min-height: 130px;
                 max-height: 110px; 
             }            
             
@@ -150,24 +165,27 @@ body {
         .show-remove:hover .remove{
             display: block;
             max-width: 200px;
-            max-width: 14px;
+            min-width: 14px;
             float:right;
         }   
         .trash-place{
-            padding-right: 17%;
+            padding-right: 21%;
             margin-bottom: 4%;
 
                 .remove {
                 display: none;
                 cursor: pointer;
                 max-width: 200px;
-                max-width: 14px;
+                min-width: 14px;
                 float:right;
             }
         }
-        
-
-        
+        .adjust {
+            min-width:200px;
+            min-height:50px;
+            max-width: 200px;
+            max-height: 250px; 
+        }
         .copyright {
             background-color: #333333;
             color: white;
