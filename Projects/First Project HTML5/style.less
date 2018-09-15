@@ -155,37 +155,32 @@ body {
                 border: 0 none;
                 outline: none;
                 overflow-y: auto;
-                margin-bottom: 5px;
                 max-width:150px;
                 min-height: 130px;
                 max-height: 110px; 
             }            
             
         } 
-        .show-remove:hover .remove{
+        .show-remove:hover .remove,.show-remove:hover .editNote{
             display: block;
             max-width: 200px;
             min-width: 14px;
             float:right;
-        }   
+        }  
         .trash-place{
             padding-right: 21%;
+            padding-left: 13%;
             margin-bottom: 4%;
-
                 .remove {
-                display: none;
-                cursor: pointer;
-                max-width: 200px;
-                min-width: 14px;
-                float:right;
+                    display: none;
+                    cursor: pointer;
             }
-        }
-        .adjust {
-            min-width:200px;
-            min-height:50px;
-            max-width: 200px;
-            max-height: 250px; 
-        }
+                .editNote{
+                    display: none;
+                    cursor: pointer;
+                    padding-right: 3px;
+            }
+        }   
         .copyright {
             background-color: #333333;
             color: white;
