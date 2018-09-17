@@ -1,5 +1,15 @@
 # Task Board Project
 
+## Screenshots of the Project
+
+* **Start of the site:** You can add, edit and delete notes. You will receive an alert message of your expired tasks.
+
+![taskboardstart](https://github.com/eligarlo/Full-Stack-JB/blob/master/Projects/First%20Project%20HTML5/img/Task%20Board%20Index.png)
+
+* **Edition of the note:** You will get all the inputs already fill up, you don't really want to create a new note.
+
+![taskboardedition](https://github.com/eligarlo/Full-Stack-JB/blob/master/Projects/First%20Project%20HTML5/img/Task%20Board%20Edition.png)
+
 ## Contains:
 - HTML5
 - CSS3
@@ -20,5 +30,6 @@
 
 ## Extras:
 
+- SPA
 - Message of Expiration Date
 - Edit task
