@@ -1,6 +1,6 @@
-# Task Board Project
+# Task Board Project https://eligarlo.github.io/Task-Board/
 
-## Screenshots of the Project
+## Screenshots of the Project 
 
 * **Start of the site:** You can add, edit and delete notes. You will receive an alert message of your expired tasks.
 
