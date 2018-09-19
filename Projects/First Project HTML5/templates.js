@@ -66,8 +66,10 @@ function displayNoteTemplate() {
         <span class="expiredDate"></span>
         <div id="{{title}}1" class="col-sm-2 notes-img note show-remove {{justPosted}}">
             <div class="row align-items-start">
-                <div class="col-sm-6"><span class="underline"><strong>{{title}}</strong></span></div>
-                <div class="col-sm-6 trash-place">
+                <div class="col-sm-6 sm-height">
+                <span class="underline"><strong>{{title}}</strong></span>
+                </div>
+                <div class="col-sm-6 col-md-6 trash-place">
                     <i onclick="taskBoard.startSite.removeNote(id)" id="{{title}}" class="far fa-trash-alt remove"></i>
                     <a href="#" data-href="{{title}}" id="{{title}}2" onclick="taskBoard.editTask.noteToEdit(id)"><i class="fas fa-pencil-alt editNote"></i></a>
                 </div>

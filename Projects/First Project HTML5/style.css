@@ -141,10 +141,14 @@ body footer .show-remove:hover .editNote {
   min-width: 14px;
   float: right;
 }
+body footer .sm-height {
+  max-width: 105.5px;
+}
 body footer .trash-place {
   padding-right: 21%;
   padding-left: 13%;
   margin-bottom: 4%;
+  max-width: 105.5px;
 }
 body footer .trash-place .remove {
   display: none;
