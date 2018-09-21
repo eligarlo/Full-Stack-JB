@@ -4,11 +4,11 @@
 
 * **Start of the site:** You can add, edit and delete notes. You will receive an alert message of your expired tasks.
 
-![taskboardstart](https://github.com/eligarlo/Full-Stack-JB/blob/master/Projects/First%20Project%20HTML5/img/Task%20Board%20Index.png)
+![task board index](https://user-images.githubusercontent.com/24276329/45876123-6b754800-bda2-11e8-8768-213fad8eae03.png)
 
 * **Edition of the note:** You will get all the inputs already fill up, you don't really want to create a new note.
 
-![taskboardedition](https://github.com/eligarlo/Full-Stack-JB/blob/master/Projects/First%20Project%20HTML5/img/Task%20Board%20Edition.png)
+![task board edition](https://user-images.githubusercontent.com/24276329/45876156-83e56280-bda2-11e8-8a39-5cb47319c02b.png)
 
 ## Contains:
 - HTML5
